@@ -18,4 +18,4 @@ services:
       # using PYTHONUNBUFFERED: 1 can fix this
       PYTHONUNBUFFERED: 1
     volumes:
-      - ./database:/usr/app/src/database
+      - .:/usr/app/src
