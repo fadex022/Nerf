@@ -23,7 +23,7 @@ def is_owner() -> Callable[[T], T]:
     """
     async def predicate(context: commands.Context) -> bool:
         
-        if context.author.id not in os.getenv("owners").split(" "):
+        if str(context.author.id) not in os.getenv("owners").split(" "):
             print(os.getenv("owners").split(" "))
             print(context.author.id)
             raise UserNotOwner
