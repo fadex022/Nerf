@@ -137,7 +137,7 @@ async def on_message(message: discord.Message) -> None:
     if message.content.lower().startswith('hi nerf'):
         await message.channel.send(f'Salut {message.author}!')
     
-    if message.content.lower().__contains__('mercon'):
+    if message.content.lower().__contains__(['mercon']):
         total = await db_manager.add_warn(
              message.author.id,message.guild.id, bot.user.id, "Insulte")
         embed = discord.Embed(
